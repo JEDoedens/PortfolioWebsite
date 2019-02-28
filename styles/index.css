@@ -1,0 +1,791 @@
+/* -----------------------------Algemenezaken---------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background-repeat: no-repeat;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+p {
+  color: black;
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+}
+
+em {
+  font-style: normal;
+}
+
+fieldset {
+  border: 0;
+}
+
+/* radiobuttons niet zichtbaar */
+input {
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+}
+
+form button {
+  position: absolute;
+  right: -999em;
+}
+
+/* -----------------------------Minderalgemenezaken---------------------------------- */
+/* -----------------------------navigatie&alles aan de zijkanten/bovenkant---------------------------------- */
+body header section {
+  margin: 1em;
+}
+
+body header section ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+}
+
+body header section ul li:nth-of-type(2) {
+  margin-left: 1em;
+  display: none;
+}
+
+body header section ul:hover li:nth-of-type(2) {
+  display: block;
+}
+
+body header aside {
+  transform: rotate(90deg);
+  position: fixed;
+  z-index: +9999;
+  right: -2.5em;
+  bottom: 12%;
+}
+
+body header nav {
+  transform: rotate(-90deg);
+  position: fixed;
+  z-index: +9999;
+  left: -3.5em;
+  top: 8em;
+  width: 10em;
+}
+
+body header nav ul li:hover {
+  border-bottom: 0.01em solid;
+}
+
+body header nav ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+/* -----------------------------Main---------------------------------- */
+/* -----------------------------Over mij---------------------------------- */
+img {
+  width: 100%;
+}
+
+main {
+  margin: 0 3em;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  padding: 0.5em;
+  border-bottom: solid;
+}
+
+article {
+  height: 100%;
+  width: 100%;
+}
+
+main section:first-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 18em;
+  margin: 1em 0;
+}
+
+main section:first-of-type article {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+main section:first-of-type article header {
+  width: 50%
+}
+
+main section:first-of-type article header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0 2em;
+}
+
+main section:first-of-type article footer {
+  width: 50%;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main section:first-of-type article footer img {
+  width: 9em;
+  background-color: white;
+  padding: 0.5em 0.5em 1.5em 0.5em;
+  box-shadow: 0 10px 30px 0 rgba(35, 31, 32, .1);
+  z-index: 99;
+}
+
+main section:first-of-type article:first-of-type footer img {
+  width: 15.5em;
+  /* background-color: transparent; */
+  padding: 1em 1em 0em 1em;
+  /* padding: 0; */
+  /* box-shadow: none; */
+  margin: 2em 0em 0em 2em;
+}
+
+main section article.Joppa {
+  grid-area: 1/2/2/4;
+  border-bottom: solid;
+}
+
+main section article.Vriend {
+  grid-area: 2/1/3/3;
+}
+
+main section article.Vriend footer img {
+  padding: 0.5em 0.5em 3em 0.5em;
+}
+
+main section article.Kind {
+  grid-area: 3/1/4/3;
+  flex-flow: row-reverse;
+  border-right: solid;
+}
+
+main section article.Gezin {
+  grid-area: 4/2/5/4;
+  border-left: solid;
+}
+
+main section article.Gezin footer img {
+  width: 16em;
+}
+
+main section article.Plaats {
+  grid-area: 5/1/6/4;
+  justify-content: flex-start;
+}
+
+main section article.Studie {
+  grid-area: 6/2/7/4;
+  flex-flow: row-reverse;
+  border-bottom: solid;
+}
+
+main section article.Studie footer img {
+  width: 14em;
+}
+
+main section article.Profilering {
+  grid-area: 7/1/8/3;
+  flex-flow: row-reverse;
+  border-left: solid;
+  border-bottom: solid;
+}
+
+div {
+  z-index: -1;
+  margin-right: -3em;
+}
+
+main section div#HandVriend {
+  grid-area: 2/2/3/4;
+  /* background: rgb(219, 174, 177); */
+  background-image: url(../images/Richardwijzenmouw.png);
+  background-size: 80%;
+  background-position-y: 50%;
+  background-position-x: 180%;
+}
+
+main section div#HandKind {
+  grid-area: 3/1/4/2;
+  /* background: rgb(153, 196, 218); */
+  margin: 0 -0.2em 0 -3em;
+  background-image: url(../images/Elodiehoudop1.png);
+  background-size: 80%;
+  background-position-y: 13em;
+  border-bottom: solid;
+}
+
+main section div#TouwMetBordje {
+  grid-area: 3/3/5/4;
+  /* background: rgb(223, 173, 149); */
+  background-image: url(../images/touw.png);
+  background-size: 3em;
+  background-position-x: 45%;
+  z-index: 1;
+  border-top: solid;
+}
+
+main section div#Skyline {
+  grid-area: 5/1/6/4;
+  /* background: rgb(172, 203, 202); */
+  background-image: url("../images/utrechtskyline.png");
+  background-size: 100%;
+  background-position-y: 100%;
+  margin: 0 -3em;
+}
+
+main section div#HandStudie {
+  grid-area: 6/1/7/3;
+  /* background: rgb(208, 148, 180); */
+  background-image: url(../images/Joppahandgeven1.png);
+  background-size: 105%;
+  background-position-y: 50%;
+  background-position-x: 50%;
+  margin: 0;
+}
+
+main section div#PunaiseProfilering {
+  grid-area: 7/1/8/2;
+  /* background: rgb(208, 148, 180); */
+  background-image: url(../images/punaise.png);
+  background-size: 2.5em;
+  background-position-x: 45%;
+  z-index: 99;
+  margin: 0em;
+}
+
+/* -----------------------------Werk---------------------------------- */
+main section:last-of-type {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 6em;
+}
+
+main section:last-of-type header.FotoLijstHand {
+  width: 100%;
+  background-image: url(../images/Joppahangen.png);
+  padding: 10%;
+  background-size: 70%;
+  background-position-y: 40%;
+  background-position-x: 160%;
+}
+
+main section:last-of-type div a h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  transition: color 1s ease-in-out;
+}
+
+main section:last-of-type div.naarlinks {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  z-index: 99;
+  background-color: white;
+  padding: 0.25em 0.5em;
+  box-shadow: 0 10px 30px 0 rgba(35, 31, 32, .1);
+}
+
+main section:last-of-type div.naarrechts {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  z-index: 99;
+  background-color: white;
+  padding: 0.25em 0.5em;
+  box-shadow: 0 10px 30px 0 rgba(35, 31, 32, .1);
+}
+
+main section:last-of-type div div.werk {
+  width: 49.5%;
+  margin: 0em;
+}
+
+main section:last-of-type div a {
+  background-size: 100%;
+  background-position-x: 50%;
+  width: 100%;
+  height: 24em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color .2s ease-out;
+  color: white;
+}
+
+main section:last-of-type div a h2 {
+  display: none;
+}
+
+main section:last-of-type div a:hover h2 {
+  display: block;
+}
+
+main section:last-of-type div.naarlinks {
+  transform: skew(15deg);
+}
+
+main section:last-of-type div.naarrechts {
+  transform: skew(-15deg);
+}
+
+main section:last-of-type div a#werk1 {
+  background-image: url(../images/1Ledflow.png);
+  background-color: antiquewhite;
+}
+
+main section:last-of-type div a:hover#werk1 {
+  background-image: none;
+}
+
+main section:last-of-type div a#werk2 {
+  background-image: url(../images/2RETverhalen.jpg);
+  background-size: 115%;
+  background-color: rgb(208, 148, 180);
+}
+
+main section:last-of-type div a:hover#werk2 {
+  background-image: none;
+}
+
+main section:last-of-type div a#werk3 {
+  background-image: url(../images/3Teunsjourney.png);
+  background-color: rgb(172, 203, 202);
+}
+
+main section:last-of-type div a:hover#werk3 {
+  background-image: none;
+}
+
+main section:last-of-type div a#werk4 {
+  background-image: url(../images/4klasseboek.png);
+  background-color: lightcoral;
+}
+
+main section:last-of-type div a:hover#werk4 {
+  background-image: none;
+}
+
+main section:last-of-type div a#werk5 {
+  background-image: url(../images/5Stepaway.png);
+  background-color: rgb(153, 196, 218);
+}
+
+main section:last-of-type div a:hover#werk5 {
+  background-image: none;
+}
+
+main section:last-of-type div a#werk6 {
+  background-image: url(../images/6geboortekaartje.png);
+  background-color: rgb(219, 174, 177);
+}
+
+main section:last-of-type div a:hover#werk6 {
+  background-image: none;
+}
+
+main section:last-of-type div a#werk7 {
+  background-image: url(../images/7Teunsjourney.jpg);
+}
+
+main section:last-of-type div a:hover#werk7 {
+  background-color: rgb(223, 173, 149);
+  background-image: none;
+}
+
+main section:last-of-type div a#werk8 {
+  background-color: antiquewhite;
+  background-image: url(../images/album8.jpg);
+}
+
+main section:last-of-type div a:hover#werk8 {
+  background-image: none;
+}
+
+main section:last-of-type div a#werk9 {
+  background-color: lightblue;
+  background-image: url(../images/album9.jpg);
+}
+
+main section:last-of-type div a:hover#werk9 {
+  background-image: none;
+}
+
+/* -----------------------------Projectpagina's---------------------------------- */
+body.projectpagina main section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 9em;
+  margin: 1em 0;
+  grid-gap: 0.2em;
+}
+
+body.projectpagina main section div.projectfoto {
+  transform: none;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  z-index: -1;
+  padding: 0em;
+}
+
+body.projectpagina main section article {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+body.projectpagina main section article.Opdracht {
+  grid-area: 1/1/4/4;
+}
+
+body.projectpagina main section article.Oplossing {
+  grid-area: 4/4/7/7;
+  max-width: 80%;
+}
+
+body.projectpagina main section div#Probleemhand {
+  grid-area: 3/1/4/3;
+  background-image: url(../images/Projectfotos/joppaophouden.png);
+  background-size: 160%;
+  background-position-y: 70%;
+  background-position-x: 140%;
+  margin: 0;
+}
+
+body.projectpagina main section div#Oplossinghand {
+  grid-area: 4/6/6/7;
+  background-image: url(../images/Projectfotos/Joppaho.png);
+  background-size: 180%;
+  background-position-y: -30%;
+  background-position-x: -30%;
+  margin: 0;
+}
+
+body.projectpagina main section div.projectfoto {
+  background-size: 200%;
+}
+
+body.projectpagina main section div#project1foto1 {
+  background-image: url(../images/Projectfotos/Ledflow/zebra.png);
+  grid-area: 1/4/3/7;
+  background-size: 120%;
+  z-index: -3;
+}
+
+body.projectpagina main section div#project1foto2 {
+  background-image: url(../images/Projectfotos/Ledflow/lijn.png);
+  grid-area: 2/4/4/6;
+  background-size: 180%;
+}
+
+body.projectpagina main section div#project1foto3 {
+  background-image: url(../images/Projectfotos/Ledflow/knop.png);
+  grid-area: 2/5/4/7;
+  background-size: 180%;
+  z-index: -2;
+  background-position-x: -7em;
+}
+
+body.projectpagina main section div#project1foto4 {
+  background-image: url(../images/Projectfotos/Ledflow/Storyboard.png);
+  grid-area: 4/1/6/4;
+  background-size: 100%;
+}
+
+body.projectpagina main section div#project1foto5 {
+  background-image: url(../images/Projectfotos/Ledflow/Microinteracties1.png);
+  grid-area: 6/1/7/4;
+  background-size: 100%;
+  background-position-y: -5em;
+}
+
+body.projectpagina main section div#project1foto6 {
+  background-image: url(#);
+  grid-area: 6/3/7/4;
+  background-size: 100%;
+  background-color: transparent;
+}
+
+body.projectpagina main section video {
+  grid-area: 7/4/9/7;
+  width: 100%;
+}
+
+/* -------------------------------project2(RET)------------------------------------- */
+body.projectpagina main section div#project2foto1 {
+  background-image: url(../images/Projectfotos/Retreisverhalen/huisstijl.jpg);
+  grid-area: 1/4/3/7;
+  background-size: 120%;
+  z-index: -3;
+}
+
+body.projectpagina main section div#project2foto2 {
+  background-image: url(../images/Projectfotos/Retreisverhalen/Costumerjourney.png);
+  grid-area: 2/4/4/6;
+  background-size: 140%;
+}
+
+body.projectpagina main section div#project2foto3 {
+  background-image: url(../images/Projectfotos/Retreisverhalen/Tekengebied4.png);
+  grid-area: 3/6/4/6;
+  background-size: 180%;
+  z-index: -2;
+}
+
+body.projectpagina main section div#project2foto4 {
+  background-image: url(../images/Projectfotos/Retreisverhalen/responsive.png);
+  grid-area: 4/1/6/4;
+  background-size: 100%;
+}
+
+body.projectpagina main section div#project2foto5 {
+  background-image: url(../images/Projectfotos/Retreisverhalen/hoofdschermen.png);
+  grid-area: 6/1/7/2;
+  background-size: 100%;
+}
+
+body.projectpagina main section div#project2foto6 {
+  background-image: url(../images/Projectfotos/Retreisverhalen/subschermen.png);
+  grid-area: 6/2/7/3;
+  background-size: 100%;
+}
+
+body.projectpagina main section div#project2foto7 {
+  background-image: url(../images/Projectfotos/Retreisverhalen/microinteractie.png);
+  grid-area: 6/3/7/4;
+  background-size: 100%;
+}
+
+body.projectpagina main section a {
+  font-family: 'Poppins', sans-serif;
+  border-left: 0.05em black solid;
+}
+
+body.projectpagina main section a:hover {
+  text-decoration: underline;
+}
+
+body.projectpagina main section a#RETverhalenwebsite {
+  grid-area: 7/1/8/4;
+}
+
+body.projectpagina main section a#Ontwerpdocumentatie {
+  grid-area: 7/4/8/7;
+}
+
+/* -------------------------------project3(Teunsjourney)------------------------------------- */
+body.projectpagina main section div#project3foto1 {
+  background-image: url(../images/Projectfotos/Teunsjourney/storyboard.png);
+  grid-area: 1/4/4/6;
+  background-size: 100%;
+  z-index: -1;
+}
+
+body.projectpagina main section div#project3foto2 {
+  background-image: url(#);
+  grid-area: 2/4/4/6;
+  background-size: 110%;
+  background-color: transparent;
+}
+
+body.projectpagina main section div#project3foto3 {
+  background-image: url(../images/Projectfotos/Teunsjourney/berg.jpeg);
+  grid-area: 1/6/4/7;
+  background-size: 127%;
+  z-index: -1;
+}
+
+body.projectpagina main section div#project3foto4 {
+  background-image: url(../images/Projectfotos/Teunsjourney/flow.png);
+  grid-area: 4/1/7/4;
+  background-size: 100%;
+}
+
+body.projectpagina main section div#project3foto5 {
+  background-image: url(#);
+  grid-area: 6/1/7/4;
+  background-size: 100%;
+  background-color: transparent;
+}
+
+body.projectpagina main section div#project3foto6 {
+  background-image: url(#);
+  grid-area: 6/3/7/4;
+  background-size: 100%;
+  background-color: transparent;
+}
+
+/* -------------------------------project4(Klasseboek)------------------------------------- */
+body.projectpagina main section div#project4foto1 {
+  background-image: url(#);
+  grid-area: 1/4/4/7;
+  background-size: 140%;
+  z-index: -3;
+  background-color: transparent;
+}
+
+body.projectpagina main section div#project4foto2 {
+  background-image: url(../images/Projectfotos/Klasseboek/1.png);
+  grid-area: 1/4/3/6;
+  background-size: 100%;
+  margin: 0.5em;
+  z-index: -2;
+  background-position-x: 50%;
+  background-position-y: 20%;
+      padding-right: 6.5em;
+  box-shadow: 0 10px 30px 0 rgba(35, 31, 32, .1);
+}
+
+body.projectpagina main section div#project4foto3 {
+  background-image: url(../images/Projectfotos/Klasseboek/2.png);
+  grid-area: 2/5/4/7;
+  background-size: 140%;
+  z-index: -1;
+  margin: -0.5em;
+  /* background-position-x: 50%; */
+  background-position-y: 80%;
+  box-shadow: 0 10px 30px 0 rgba(35, 31, 32, .1);
+}
+
+body.projectpagina main section div#project4foto4 {
+  background-image: url(../images/Projectfotos/Klasseboek/3.png);
+  grid-area: 4/1/6/3;
+  background-size: 140%;
+  box-shadow: 0 10px 30px 0 rgba(35, 31, 32, .1);
+}
+
+body.projectpagina main section div#project4foto5 {
+  background-image: url(../images/Projectfotos/Klasseboek/4.png);
+  grid-area: 6/1/7/4;
+  background-size: 100%;
+  background-position-y: -5em;
+  box-shadow: 0 10px 30px 0 rgba(35, 31, 32, .1);
+}
+
+body.projectpagina main section div#project4foto6 {
+  background-image: url(#);
+  grid-area: 6/3/7/4;
+  background-size: 100%;
+  background-color: transparent;
+}
+
+body.projectpagina main section a#klassboekpdf {
+  grid-area: 7/1/8/4;
+}
+
+/* -------------------------------project5(Step away)------------------------------------- */
+body.projectpagina main section div#project5foto1 {
+  background-image: url(../images/Projectfotos/Stepaway/beespray.png);
+  grid-area: 3/4/4/5;
+  background-size: 40%;
+  z-index: -3;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  transform: rotate(-20deg);
+
+}
+
+body.projectpagina main section div#project5foto2 {
+  background-image: url(../images/Projectfotos/Stepaway/5_0-50-100-0-2.png);
+  grid-area: 1/6/2/7;
+  background-size: 80%;
+  background-position-x: 50%;
+}
+
+body.projectpagina main section div#project5foto3 {
+  background-image: url(../images/Projectfotos/Stepaway/Startscherm.png);
+  grid-area: 1/4/4/7;
+  background-size: 50%;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  z-index: -2;
+}
+
+body.projectpagina main section div#project5foto4 {
+  background-image: url(../images/Projectfotos/Stepaway/menu.png);
+  grid-area: 4/1/7/3;
+  background-size: 80%;
+}
+
+body.projectpagina main section div#project5foto5 {
+  background-image: url(../images/Projectfotos/Stepaway/SomthingIDontNeed6.png);
+  grid-area: 5/2/8/4;
+  background-size: 80%;
+  background-position-x: 100%;
+}
+
+body.projectpagina main section div#project5foto6 {
+  background-image: url(../images/Projectfotos/Stepaway/spray-paint-banner-11-1024x393_0-50-100-0-2.png);
+  grid-area: 7/1/8/3;
+  background-size: 80%;
+  background-position-x: 40%;
+  background-position-y: 50%;
+}
+
+/* -------------------------------project6(Geboortekaartje)------------------------------------- */
+body.projectpagina main section div#project6foto1 {
+  background-image: url(../images/Projectfotos/GeboortekaartjeCorlijn/1.png);
+  grid-area: 4/1/6/4;
+  background-size: 80%;
+  background-position-x: 50%;
+}
+
+body.projectpagina main section div#project6foto2 {
+  background-image: url(../images/Projectfotos/GeboortekaartjeCorlijn/3.png);
+  grid-area: 5/1/7/4;
+  background-size: 80%;
+  margin-top: 6em;
+  background-position-x: 50%;
+  background-position-y: 100%;
+}
+
+body.projectpagina main section div#project6foto3 {
+  background-image: url(#);
+  grid-area: 2/5/4/7;
+  background-color: transparent;
+}
+
+body.projectpagina main section div#project6foto4 {
+  background-image: url(../images/Projectfotos/GeboortekaartjeCorlijn/4.png);
+    grid-area: 7/4/11/7;
+  background-size: 100%;
+}
+
+body.projectpagina main section div#project6foto5 {
+  background-image: url(../images/Projectfotos/GeboortekaartjeCorlijn/5.png);
+    grid-area: 1/4/4/7;
+  background-size: 100%;
+}
+
+body.projectpagina main section div#project6foto6 {
+  background-image: url(#);
+  grid-area: 6/3/7/4;
+  background-size: 100%;
+  background-color: transparent;
+}
