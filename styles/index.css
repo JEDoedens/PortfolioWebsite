@@ -721,7 +721,7 @@ body.projectpagina main section div#project5foto2 {
 body.projectpagina main section div#project5foto3 {
   background-image: url(../images/Projectfotos/Stepaway/Startscherm.png);
   grid-area: 1/4/4/7;
-  background-size: 50%;
+  background-size: 40%;
   background-position-x: 50%;
   background-position-y: 50%;
   z-index: -2;
@@ -730,13 +730,13 @@ body.projectpagina main section div#project5foto3 {
 body.projectpagina main section div#project5foto4 {
   background-image: url(../images/Projectfotos/Stepaway/menu.png);
   grid-area: 4/1/7/3;
-  background-size: 80%;
+  background-size: 60%;
 }
 
 body.projectpagina main section div#project5foto5 {
   background-image: url(../images/Projectfotos/Stepaway/SomthingIDontNeed6.png);
   grid-area: 5/2/8/4;
-  background-size: 80%;
+  background-size: 60%;
   background-position-x: 100%;
 }
 
